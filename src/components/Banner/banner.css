@@ -1,7 +1,7 @@
 .app__header {
 	display: flex;
 	width: 100%;
-	background-color: var(--cor-header);
+	background-color: var(--cor-destaque);
 	height: 65vh;
 	position: relative;
 	overflow-y: hidden;
@@ -92,11 +92,12 @@
 	}
 }
 
-.imagem__equipe {
+.imagem__banner {
 	display: none;
 	position: absolute;
-	height: clamp(4.5rem, 82vh, 28.75rem);
-	width: auto;
+	max-height: 80vh;
+	max-width: 30vw;
+	width: 100%;
 	right: 0;
 	bottom: 0;
 }
@@ -112,7 +113,7 @@
 	.app__header {
 		height: 80vh;
 	}
-	.imagem__equipe {
+	.imagem__banner {
 		display: block;
 	}
 	#circulo1 {
