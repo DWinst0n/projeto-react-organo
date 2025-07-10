@@ -1,0 +1,22 @@
+@import url(reset.css);
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Prata&display=swap");
+:root {
+	--fonte-primaria: "Prata", serif;
+	--fonte-secundaria: "Montserrat", sans-serif;
+	--cor-destaque: #6278f7;
+	--cor-fonte: #212121;
+	--cor-fonte-contraste: var(--cor-input);
+	--cor-fonte-terciaria: #afafaf;
+	--cor-form: #f6f6f6;
+	--cor-input: #ffffff;
+}
+* {
+	box-sizing: border-box;
+	user-select: none;
+}
+body {
+	width: 100%;
+}
+img {
+	pointer-events: none;
+}

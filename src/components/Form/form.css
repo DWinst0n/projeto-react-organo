@@ -1,0 +1,56 @@
+.form__container {
+	display: flex;
+	justify-content: center;
+	max-width: 80vw;
+	background-color: var(--cor-form);
+	padding: clamp(1rem, 4vw, 2rem) clamp(0.75rem, 8vw, 6rem);
+	margin: 5rem auto 5rem auto;
+	border-radius: 1.25rem;
+	box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.08);
+}
+.formulario {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	gap: clamp(0.75rem, 0.75vh, 2.75rem);
+}
+.formulario h3 {
+	align-self: center;
+	font-family: var(--fonte-primaria);
+	font-size: clamp(1.25rem, 1vh, 2rem);
+}
+
+.campo__form {
+	display: flex;
+	gap: 0.5rem;
+	flex-direction: column;
+	margin-bottom: 0.75rem;
+}
+.form__input,
+.nome__arquivo {
+	padding: 1rem 0.65rem;
+	background-color: var(--cor-input);
+	border: none;
+	box-shadow: 0.625rem 0.625rem 2rem rgba(0, 0, 0, 0.06);
+}
+.file__upload {
+	display: flex;
+	gap: 0.5rem;
+	flex-direction: column;
+	width: 100%;
+}
+.file__upload,
+.dado__tipo {
+	font-family: var(--fonte-secundaria);
+	font-size: 1.125rem;
+	font-weight: 600;
+}
+.nome__arquivo,
+.form__input::placeholder {
+	cursor: pointer;
+	font-size: clamp(0.75rem, 2vw, 1.25rem);
+	font-family: var(--fonte-secundaria);
+	font-style: italic;
+	font-weight: 400;
+	color: var(--cor-fonte-terciaria);
+}
