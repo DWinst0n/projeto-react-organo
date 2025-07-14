@@ -27,7 +27,8 @@
 	margin-bottom: 0.75rem;
 }
 .form__input,
-.nome__arquivo {
+.nome__arquivo,
+.form__select {
 	padding: 1rem 0.65rem;
 	background-color: var(--cor-input);
 	border: none;
@@ -53,4 +54,18 @@
 	font-style: italic;
 	font-weight: 400;
 	color: var(--cor-fonte-terciaria);
+}
+.botao {
+	background-color: #6278f7;
+	border-radius: 10px;
+	font-weight: 700;
+	font-size: 18px;
+	padding: 32px;
+	border: none;
+	cursor: pointer;
+	color: #fff;
+	margin: 32px 0;
+}
+.botao:hover {
+	color: #95ffd4;
 }
