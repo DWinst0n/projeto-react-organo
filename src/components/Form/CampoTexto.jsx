@@ -1,4 +1,4 @@
-export const CampoTexto = (p) => {
+const CampoTexto = (p) => {
 	const placeholderModificada = `Digite seu ${p.dado.toLowerCase()}`;
 	const id = `campo${p.dado}`;
 	return (
@@ -6,7 +6,9 @@ export const CampoTexto = (p) => {
 			<label for={id} className="dado__tipo">
 				{p.dado}
 			</label>
-			<input placeholder={placeholderModificada} id={id} className="form__input" />
+			<input required={p.obrigatorio} placeholder={placeholderModificada} id={id} className="form__input" />
 		</div>
 	);
 };
+
+export default CampoTexto;

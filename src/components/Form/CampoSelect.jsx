@@ -4,7 +4,7 @@ const CampoSelect = (p) => {
 			<label htmlFor="selecionarCargo" className="dado__tipo">
 				{p.dado}
 			</label>
-			<select name="" id="selecionarCargo" className="form__select" defaultValue="">
+			<select required={p.obrigatorio} name="" id="selecionarCargo" className="form__select" defaultValue="">
 				<option value="" disabled>
 					Selecione o time:
 				</option>

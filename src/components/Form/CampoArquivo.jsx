@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const CampoArquivo = ({ onChange }) => {
+const CampoArquivo = ({ onChange }) => {
 	const [preview, setPreview] = useState(null);
 	const [fileName, setFileName] = useState("Insira uma foto");
 
@@ -47,3 +47,5 @@ export const CampoArquivo = ({ onChange }) => {
 		</div>
 	);
 };
+
+export default CampoArquivo;
