@@ -55,17 +55,20 @@
 	font-weight: 400;
 	color: var(--cor-fonte-terciaria);
 }
-.botao {
-	background-color: #6278f7;
-	border-radius: 10px;
+.botao__form {
+	background-color: var(--cor-destaque);
+	font-family: var(--fonte-secundaria);
+	border-radius: 0.625rem;
 	font-weight: 700;
-	font-size: 18px;
-	padding: 32px;
+	font-size: clamp(0.5rem, 4vw, 1.125rem);
+	padding: clamp(1rem, 4vw, 2rem);
 	border: none;
 	cursor: pointer;
-	color: #fff;
-	margin: 32px 0;
+	color: var(--cor-form);
+	margin: 2rem 0;
 }
-.botao:hover {
-	color: #95ffd4;
+.botao__form:hover {
+	background-color: transparent;
+	color: var(--cor-destaque);
+	outline: 1px solid var(--cor-destaque);
 }
