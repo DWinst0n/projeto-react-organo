@@ -10,7 +10,7 @@ const Form = (p) => {
 	const [nome, setNome] = useState("");
 	const [cargo, setCargo] = useState("");
 	const [arquivo, setArquivo] = useState({});
-	const [time, setTime] = useState("");
+	const [nomeTime, setTime] = useState("");
 
 	function cadastrar(e) {
 		e.preventDefault();
@@ -18,7 +18,7 @@ const Form = (p) => {
 			nome,
 			cargo,
 			arquivo,
-			time,
+			nomeTime,
 		});
 	}
 	return (
@@ -28,7 +28,13 @@ const Form = (p) => {
 				<CampoTexto valor={nome} aoAlterado={(valor) => setNome(valor)} obrigatorio={true} dado="Nome" />
 				<CampoTexto valor={cargo} aoAlterado={(valor) => setCargo(valor)} obrigatorio={true} dado="Cargo" />
 				<CampoArquivo valor={arquivo} aoAlterado={(valor) => setArquivo(valor)} />
-				<CampoSelect valor={time} aoAlterado={(valor) => setTime(valor)} obrigatorio={true} dado="Time" times={times} />
+				<CampoSelect
+					valor={nomeTime}
+					aoAlterado={(valor) => setTime(valor)}
+					obrigatorio={true}
+					dado="Time"
+					times={times}
+				/>
 
 				<Botao>Criar card</Botao>
 			</form>

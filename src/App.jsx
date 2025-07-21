@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Banner from "./components/Banner";
 import Form from "./components/Form";
+import Times from "./components/Times";
 
 function App() {
 	const [colaboradores, setColaboradores] = useState([]);
@@ -20,6 +21,7 @@ function App() {
 				<h3>Minha Organização:</h3>
 				<div></div>
 			</div>
+			<Times colabs={colaboradores} />
 		</div>
 	);
 }
