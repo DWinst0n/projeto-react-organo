@@ -9,6 +9,14 @@
 	--cor-fonte-terciaria: #afafaf;
 	--cor-form: #f6f6f6;
 	--cor-input: #ffffff;
+
+	--cor-programacao: #57c278;
+	--cor-front-end: #82cffa;
+	--cor-data-science: #a6d157;
+	--cor-devops: #e06b69;
+	--cor-ux-design: #db6ebf;
+	--cor-mobile: #ffba05;
+	--cor-inovacao-gestao: #ff8a29;
 }
 * {
 	box-sizing: border-box;
@@ -20,4 +28,22 @@ body {
 }
 img {
 	pointer-events: none;
+}
+
+.minha__organizacao__container {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+}
+.minha__organizacao__container h3 {
+	font-size: clamp(1.5rem, 2vw, 2.5rem);
+	font-family: var(--fonte-primaria);
+	font-weight: 400;
+	line-height: clamp(2.5rem, 4vw, 4.5rem);
+}
+.minha__organizacao__container div {
+	width: 10vw;
+	border-top: 4px solid var(--cor-destaque);
 }
