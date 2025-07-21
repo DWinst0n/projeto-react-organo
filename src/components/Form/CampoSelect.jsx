@@ -1,10 +1,20 @@
 const CampoSelect = (p) => {
+	const aoSelecionado = (e) => {
+		p.aoAlterado(e.target.value);
+	};
+
 	return (
 		<div className="campo__form">
 			<label htmlFor="selecionarCargo" className="dado__tipo">
 				{p.dado}
 			</label>
-			<select required={p.obrigatorio} name="" id="selecionarCargo" className="form__select" defaultValue="">
+			<select
+				onChange={aoSelecionado}
+				required={p.obrigatorio}
+				name=""
+				id="selecionarCargo"
+				className="form__select"
+				defaultValue="">
 				<option value="" disabled>
 					Selecione o time:
 				</option>

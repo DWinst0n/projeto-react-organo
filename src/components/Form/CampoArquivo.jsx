@@ -1,23 +1,23 @@
 import { useState } from "react";
 
-const CampoArquivo = ({ onChange }) => {
-	const [preview, setPreview] = useState(null);
-	const [fileName, setFileName] = useState("Insira uma foto");
+const CampoArquivo = (p) => {
+	const [previa, setPrevia] = useState(null);
+	const [nomeArquivo, setnomeArquivo] = useState("Insira uma foto");
 
-	const handleFileChange = (e) => {
-		const file = e.target.files[0];
-		if (file) {
-			setFileName(file.name);
-
-			const reader = new FileReader();
-			reader.onloadend = () => {
-				setPreview(reader.result);
-				if (onChange) onChange(file);
+	const inserirArquivo = (e) => {
+		const arquivo = e.target.files[0];
+		if (arquivo) {
+			setnomeArquivo(arquivo.name);
+			const leitor = new FileReader();
+			leitor.onloadend = () => {
+				setPrevia(leitor.result);
+				arquivo.dataUrl = leitor.result;
+				p.aoAlterado(arquivo);
 			};
-			reader.readAsDataURL(file);
+			leitor.readAsDataURL(arquivo);
 		} else {
-			setFileName("Insira uma foto");
-			setPreview(null);
+			setnomeArquivo("Insira uma foto");
+			setPrevia(null);
 		}
 	};
 
@@ -25,14 +25,14 @@ const CampoArquivo = ({ onChange }) => {
 		<div className="campo__form">
 			<label htmlFor="fileInput" className="file__upload">
 				Imagem
-				<span className="nome__arquivo">{fileName}</span>
+				<span className="nome__arquivo">{nomeArquivo}</span>
 			</label>
-			<input type="file" id="fileInput" accept="image/*" onChange={handleFileChange} style={{ display: "none" }} />
+			<input type="file" id="fileInput" accept="image/*" onChange={inserirArquivo} style={{ display: "none" }} />
 
-			{preview && (
+			{previa && (
 				<div>
 					<img
-						src={preview}
+						src={previa}
 						alt="Prévia"
 						style={{
 							width: "100px",
