@@ -5,7 +5,7 @@
 	--fonte-secundaria: "Montserrat", sans-serif;
 	--cor-destaque: #6278f7;
 	--cor-fonte: #212121;
-	--cor-fonte-contraste: var(--cor-input);
+	--cor-contraste: var(--cor-input);
 	--cor-fonte-terciaria: #afafaf;
 	--cor-form: #f6f6f6;
 	--cor-input: #ffffff;
@@ -14,17 +14,30 @@
 	--cor-front-end: #82cffa;
 	--cor-data-science: #a6d157;
 	--cor-devops: #e06b69;
-	--cor-ux-design: #db6ebf;
+	--cor-ux-e-design: #db6ebf;
 	--cor-mobile: #ffba05;
-	--cor-inovacao-gestao: #ff8a29;
+	--cor-inovacao-e-gestao: #ff8a29;
+
+	--fundo-programacao: #d9f7e9;
+	--fundo-front-end: #e8f8ff;
+	--fundo-data-science: #f0f8e2;
+	--fundo-devops: #fde7e8;
+	--fundo-ux-e-design: #fae9f5;
+	--fundo-mobile: #fff5d9;
+	--fundo-inovacao-e-gestao: #ffeedf;
 }
 * {
 	box-sizing: border-box;
 	user-select: none;
 	transition: all 0.5s ease-in;
 }
+html {
+	scrollbar-color: var(--cor-destaque) transparent;
+	scrollbar-width: thin;
+	overflow-x: hidden;
+}
 body {
-	width: 100%;
+	width: 100vw;
 }
 img {
 	pointer-events: none;

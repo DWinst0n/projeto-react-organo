@@ -64,7 +64,7 @@
 	padding: clamp(1rem, 4vw, 2rem);
 	border: none;
 	cursor: pointer;
-	color: var(--cor-form);
+	color: var(--cor-contraste);
 	margin: 2rem 0;
 }
 .botao__form:hover {
