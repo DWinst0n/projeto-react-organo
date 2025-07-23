@@ -1,4 +1,5 @@
 import Time from "./Time";
+import "./times.css";
 
 const times = ["Programação", "Front-End", "Data Science", "Devops", "UX e Design", "Mobile", "Inovação e Gestão"];
 

@@ -1,0 +1,46 @@
+.times__container {
+	display: flex;
+	flex-direction: column;
+	margin-top: clamp(1.5rem, 15vh, 5rem);
+	width: 100vw;
+}
+.container__time {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	width: 100%;
+	gap: clamp(0.75rem, 3vh, 3.25rem);
+	padding: 2rem 0;
+}
+.colaboradores__time {
+	display: flex;
+	gap: clamp(0.75rem, 2vw, 1.5rem);
+	justify-content: center;
+	align-items: center;
+}
+
+.card {
+	position: relative;
+	width: clamp(8rem, 20vw, 14rem);
+	height: clamp(10rem, 24vw, 17rem);
+	background-color: var(--cor-contraste);
+	border-radius: 0.625rem;
+}
+.time__area {
+	width: 100%;
+	height: 25%;
+	border-radius: 0.625rem 0.625rem 0 0;
+}
+.dados__colaborador {
+	position: absolute;
+	top: 10%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
+.card img {
+	width: clamp(4rem, 10vw, 7.5rem);
+	height: clamp(4rem, 10vw, 7.5rem);
+	border-radius: 50%;
+}
