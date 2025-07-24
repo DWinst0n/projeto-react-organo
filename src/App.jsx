@@ -8,9 +8,7 @@ function App() {
 
 	const aoNovoColaboradorCadastrado = (colaborador) => {
 		JSON.stringify(colaborador);
-		console.log(colaborador);
 		setColaboradores([...colaboradores, colaborador]);
-		console.log(colaboradores);
 	};
 
 	return (

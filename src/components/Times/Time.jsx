@@ -13,7 +13,15 @@ const Time = (p) => {
 			style={{
 				backgroundColor: `var(--fundo${stringModif("")})`,
 			}}>
-			<h2 className="nome__time">{p.nomeTime}</h2>
+			<div className="nome__time__container">
+				<h2 className="nome__time">{p.nomeTime}</h2>
+				<div
+					className="time__hr"
+					style={{
+						width: "5vw",
+						border: `2px solid var(--cor${stringModif("")})`,
+					}}></div>
+			</div>
 			<div className="colaboradores__time">
 				{p.colabs.map((colab) => (
 					<Card
