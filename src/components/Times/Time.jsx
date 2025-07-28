@@ -7,12 +7,15 @@ const Time = (p) => {
 		return `${termo}-${removerAcentos(p.nomeTime.toLowerCase().replaceAll(" ", "-"))}`;
 	};
 
+	if (!p.colabs || p.colabs.length === 0) return null;
+
 	return (
 		<div
 			className="container__time"
 			style={{
 				backgroundColor: `var(--fundo${stringModif("")})`,
-			}}>
+			}}
+			id="containerTime">
 			<div className="nome__time__container">
 				<h2 className="nome__time">{p.nomeTime}</h2>
 				<div
