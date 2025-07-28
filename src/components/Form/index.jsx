@@ -20,9 +20,19 @@ const Form = (p) => {
 			arquivo,
 			nomeTime,
 		});
+		p.fecharForm();
+		setNome("");
+		setCargo("");
+		setArquivo({});
+		setTime("");
 	}
 	return (
-		<section className="form__container">
+		<section
+			className="form__container"
+			style={{
+				display: p.formOpen ? "block" : "none",
+			}}
+			id="formContainer">
 			<form className="formulario" onSubmit={cadastrar}>
 				<h3>Preencha os dados para criar o card do colaborador.</h3>
 				<CampoTexto valor={nome} aoAlterado={(valor) => setNome(valor)} obrigatorio={true} dado="Nome" />
@@ -35,8 +45,23 @@ const Form = (p) => {
 					dado="Time"
 					times={times}
 				/>
-
-				<Botao>Criar card</Botao>
+				<div className="botoes__container">
+					<Botao className={"botao__form"} type="submit">
+						Criar card
+					</Botao>
+					<Botao
+						className={"botao__form"}
+						type="button"
+						onClick={() => {
+							p.fecharForm();
+							setNome("");
+							setCargo("");
+							setArquivo({});
+							setTime("");
+						}}>
+						Cancelar
+					</Botao>
+				</div>
 			</form>
 		</section>
 	);

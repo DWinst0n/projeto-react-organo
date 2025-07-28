@@ -14,7 +14,7 @@ const CampoSelect = (p) => {
 				name=""
 				id="selecionarCargo"
 				className="form__select"
-				defaultValue="">
+				value={p.valor}>
 				<option value="" disabled>
 					Selecione o time:
 				</option>

@@ -1,8 +1,17 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const CampoArquivo = (p) => {
 	const [previa, setPrevia] = useState(null);
 	const [nomeArquivo, setnomeArquivo] = useState("Insira uma foto");
+	const inputRef = useRef();
+
+	useEffect(() => {
+		if (!p.valor || !p.valor.name) {
+			setnomeArquivo("Insira uma foto");
+			setPrevia(null);
+			if (inputRef.current) inputRef.current.value = "";
+		}
+	}, [p.valor]);
 
 	const inserirArquivo = (e) => {
 		const arquivo = e.target.files[0];
@@ -27,8 +36,14 @@ const CampoArquivo = (p) => {
 				Imagem
 				<span className="nome__arquivo">{nomeArquivo}</span>
 			</label>
-			<input type="file" id="fileInput" accept="image/*" onChange={inserirArquivo} style={{ display: "none" }} />
-
+			<input
+				type="file"
+				id="fileInput"
+				accept="image/*"
+				onChange={inserirArquivo}
+				style={{ display: "none" }}
+				ref={inputRef}
+			/>
 			{previa && (
 				<div>
 					<img

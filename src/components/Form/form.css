@@ -55,6 +55,11 @@
 	font-weight: 400;
 	color: var(--cor-fonte-terciaria);
 }
+.botoes__container {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
 .botao__form {
 	background-color: var(--cor-destaque);
 	font-family: var(--fonte-secundaria);
