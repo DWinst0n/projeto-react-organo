@@ -1,7 +1,9 @@
 const Botao = (p) => {
 	return (
 		<div>
-			<button className="botao__form">{p.children}</button>
+			<button className={p.className} type={p.type} onClick={p.onClick} style={p.style}>
+				{p.children}
+			</button>
 		</div>
 	);
 };
