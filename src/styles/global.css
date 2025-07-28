@@ -42,23 +42,3 @@ body {
 img {
 	pointer-events: none;
 }
-
-.minha__organizacao__container {
-	display: flex;
-	flex-direction: column;
-	text-align: center;
-	justify-content: center;
-	align-items: center;
-	gap: 1rem;
-}
-.minha__organizacao__container h3 {
-	font-size: clamp(1.5rem, 5vw, 2.5rem);
-	font-family: var(--fonte-primaria);
-	font-weight: 400;
-	line-height: clamp(2.5rem, 4vw, 4.5rem);
-	color: var(--cor-destaque);
-}
-.minha__organizacao__container div {
-	width: 10vw;
-	border-top: 4px solid var(--cor-destaque);
-}
