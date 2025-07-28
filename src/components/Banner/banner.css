@@ -32,8 +32,9 @@
 }
 .formas__container {
 	height: 100%;
-	width: 100%;
+	width: 100vw;
 	position: relative;
+	z-index: 0;
 }
 .forma__tipo1,
 .forma__tipo2 {

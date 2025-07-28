@@ -1,7 +1,6 @@
 .times__container {
 	display: flex;
 	flex-direction: column;
-	margin-top: clamp(1.5rem, 15vh, 5rem);
 	width: 100vw;
 }
 .container__time {
