@@ -54,6 +54,8 @@
 	align-items: center;
 	justify-content: space-around;
 	gap: 0.25rem;
+	left: 50%;
+	transform: translate(-50%, 0);
 }
 .card img {
 	width: clamp(4rem, 10vw, 7.5rem);

@@ -5,7 +5,7 @@ const times = ["Programação", "Front-End", "Data Science", "Devops", "UX e Des
 
 const Times = (p) => {
 	return (
-		<section className="times__container">
+		<section className="times__container" id="containerTime">
 			{times.map((time) => (
 				<Time key={"seção " + time} colabs={p.colabs.filter((colab) => colab.nomeTime === time)} nomeTime={time} />
 			))}

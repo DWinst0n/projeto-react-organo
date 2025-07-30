@@ -46,9 +46,6 @@ const Form = (p) => {
 					times={times}
 				/>
 				<div className="botoes__container">
-					<Botao className={"botao__form"} type="submit">
-						Criar card
-					</Botao>
 					<Botao
 						className={"botao__form"}
 						type="button"
@@ -60,6 +57,9 @@ const Form = (p) => {
 							setTime("");
 						}}>
 						Cancelar
+					</Botao>
+					<Botao className={"botao__form"} type="submit">
+						Criar card
 					</Botao>
 				</div>
 			</form>

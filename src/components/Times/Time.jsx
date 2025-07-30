@@ -14,8 +14,7 @@ const Time = (p) => {
 			className="container__time"
 			style={{
 				backgroundColor: `var(--fundo${stringModif("")})`,
-			}}
-			id="containerTime">
+			}}>
 			<div className="nome__time__container">
 				<h2 className="nome__time">{p.nomeTime}</h2>
 				<div
