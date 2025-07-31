@@ -11,6 +11,8 @@ function App() {
 	const [colaboradores, setColaboradores] = useState([]);
 	const [formOpen, setOpenForm] = useState(false);
 
+	const times = ["Programação", "Front-End", "Data Science", "Devops", "UX e Design", "Mobile", "Inovação e Gestão"];
+
 	const aoNovoColaboradorCadastrado = (colaborador) => {
 		JSON.stringify(colaborador);
 		setColaboradores([...colaboradores, colaborador]);
@@ -33,6 +35,7 @@ function App() {
 				aoCadastro={(colaborador) => aoNovoColaboradorCadastrado(colaborador)}
 				formOpen={formOpen}
 				fecharForm={() => setOpenForm(false)}
+				times={times}
 			/>
 			<Botao
 				className={"btn__openForm"}
@@ -46,7 +49,7 @@ function App() {
 				<h3>Minha Organização:</h3>
 				<div></div>
 			</div>
-			<Times colabs={colaboradores} />
+			<Times colabs={colaboradores} times={times} />
 			<Footer />
 		</div>
 	);
