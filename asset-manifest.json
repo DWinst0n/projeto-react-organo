@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/projeto-react-organo/static/css/main.45e44058.css",
+    "main.js": "/projeto-react-organo/static/js/main.c3651483.js",
+    "static/media/Imagem duotone.png": "/projeto-react-organo/static/media/Imagem duotone.dd623ab7863b72d7226f.png",
+    "index.html": "/projeto-react-organo/index.html",
+    "static/media/plus-square.svg": "/projeto-react-organo/static/media/plus-square.521fb4fe20d2a058479ef7624db60dc6.svg",
+    "main.45e44058.css.map": "/projeto-react-organo/static/css/main.45e44058.css.map",
+    "main.c3651483.js.map": "/projeto-react-organo/static/js/main.c3651483.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.45e44058.css",
+    "static/js/main.c3651483.js"
+  ]
+}
