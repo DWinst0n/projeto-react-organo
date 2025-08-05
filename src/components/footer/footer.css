@@ -17,24 +17,24 @@
 	z-index: 3;
 }
 
-#circulo3,
-#circulo4 {
+.footer__shape .circulo,
+.footer__shape .circulo2 {
 	animation: pulsar 1.5s ease-in-out infinite;
 }
-#circulo3 {
+.footer__shape .circulo {
 	right: -60%;
 	bottom: -10%;
 }
-#circulo4 {
+.footer__shape .circulo2 {
 	right: 21.5%;
 	top: 4.5%;
 }
-#triangulo3 {
+.footer__shape .triangulo {
 	bottom: -7.5%;
 	left: -10%;
 	animation: girar 5s linear infinite;
 }
-#triangulo4 {
+.footer__shape .triangulo2 {
 	left: 22.5%;
 	bottom: 5%;
 	animation: girar 5s linear reverse infinite;

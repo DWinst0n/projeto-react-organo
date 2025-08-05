@@ -32,7 +32,7 @@
 }
 .formas__container {
 	height: 100%;
-	width: 100vw;
+	width: 100%;
 	position: relative;
 	z-index: 0;
 }
@@ -48,24 +48,24 @@
 	height: clamp(1rem, 20vw, 11.25rem);
 }
 
-#circulo1,
-#circulo2 {
+.banner__shape .circulo,
+.banner__shape .circulo2 {
 	animation: pulsar 1.5s ease-in-out infinite;
 }
-#circulo1 {
+.banner__shape .circulo {
 	left: 2.1%;
 	bottom: 2.1%;
 }
-#circulo2 {
+.banner__shape .circulo2 {
 	right: 10%;
 	top: 0.4%;
 }
-#triangulo1 {
+.banner__shape .triangulo {
 	top: 8.3%;
 	left: 32%;
 	animation: girar 5s linear infinite;
 }
-#triangulo2 {
+.banner__shape .triangulo2 {
 	left: 49%;
 	bottom: 2.1%;
 	animation: girar 5s linear reverse infinite;
@@ -117,19 +117,19 @@
 	.imagem__banner {
 		display: block;
 	}
-	#circulo1 {
+	.banner__shape .circulo {
 		left: 2.1%;
 		bottom: 2.1%;
 	}
-	#circulo2 {
+	.banner__shape .circulo2 {
 		right: 32%;
 		top: 0.4%;
 	}
-	#triangulo1 {
+	.banner__shape .triangulo {
 		top: 8.3%;
 		left: 32%;
 	}
-	#triangulo2 {
+	.banner__shape .triangulo2 {
 		left: 49%;
 		bottom: 2.1%;
 	}
