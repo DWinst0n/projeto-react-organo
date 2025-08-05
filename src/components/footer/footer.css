@@ -1,6 +1,4 @@
 .app__footer {
-	display: flex;
-	align-items: center;
 	width: 100%;
 	background-color: var(--cor-destaque);
 	height: 30vh;
@@ -15,54 +13,6 @@
 	top: 50%;
 	transform: translate(-50%, -50%);
 	z-index: 3;
-}
-
-.footer__shape .circulo,
-.footer__shape .circulo2 {
-	animation: pulsar 1.5s ease-in-out infinite;
-}
-.footer__shape .circulo {
-	right: -60%;
-	bottom: -10%;
-}
-.footer__shape .circulo2 {
-	right: 21.5%;
-	top: 4.5%;
-}
-.footer__shape .triangulo {
-	bottom: -7.5%;
-	left: -10%;
-	animation: girar 5s linear infinite;
-}
-.footer__shape .triangulo2 {
-	left: 22.5%;
-	bottom: 5%;
-	animation: girar 5s linear reverse infinite;
-}
-.footer__shape {
-	transform: scale(0.75);
-}
-@keyframes girar {
-	0% {
-		transform: rotate(0deg) translateX(0px);
-	}
-	50% {
-		transform: rotate(180deg) translateX(30px);
-	}
-	100% {
-		transform: rotate(360deg) translateX(0px);
-	}
-}
-@keyframes pulsar {
-	0%,
-	100% {
-		transform: scale(1);
-		opacity: 1;
-	}
-	50% {
-		transform: scale(1.2);
-		opacity: 0.7;
-	}
 }
 
 .icones__container {
@@ -85,16 +35,25 @@
 	font-weight: 500;
 	font-family: var(--fonte-secundaria);
 	color: var(--cor-contraste);
+	position: absolute;
+	bottom: 50%;
+	right: 5%;
 }
 
 @media screen and (max-width: 1024px) {
 	.app__footer {
+		display: flex;
+		align-items: center;
 		justify-content: space-evenly;
 		text-align: center;
 		flex-wrap: wrap;
 		padding: 1.5rem;
 		gap: 2rem;
 		height: 25vh;
+		overflow: hidden;
+	}
+	.app__footer span {
+		position: static;
 	}
 	.footer__shape {
 		display: none;

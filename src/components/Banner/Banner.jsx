@@ -1,7 +1,7 @@
 import "./banner.css";
 import logo from "../../img/logo.png";
 import imagembanner from "../../img/Imagem duotone.png";
-import Formas from "./Formas";
+import Formas from "../animacoes/Formas";
 
 export const Banner = () => {
 	return (

@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
+import { PlusSquareIcon } from "@phosphor-icons/react";
+
 import "./app.css";
+
 import Banner from "./components/Banner";
 import Form from "./components/Form";
 import Times from "./components/Times";
 import Footer from "./components/footer";
 import Botao from "./components/Form/Botao";
-import botaoAddCard from "./img/plus-square.svg";
 
 function App() {
 	const [colaboradores, setColaboradores] = useState([]);
@@ -43,7 +45,7 @@ function App() {
 				style={{
 					display: formOpen ? "none" : "block",
 				}}>
-				<img src={botaoAddCard} alt="" />
+				<PlusSquareIcon />
 			</Botao>
 			<div className="minha__organizacao__container">
 				<h3>Minha Organização:</h3>

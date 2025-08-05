@@ -1,3 +1,4 @@
+import Formas from "../animacoes/Formas";
 import Card from "./Card";
 
 const Time = (p) => {
@@ -24,6 +25,8 @@ const Time = (p) => {
 						border: `2px solid var(--cor${stringModif("")})`,
 					}}></div>
 			</div>
+			<Formas />
+
 			<div className="colaboradores__time">
 				{p.colabs.map((colab) => (
 					<Card

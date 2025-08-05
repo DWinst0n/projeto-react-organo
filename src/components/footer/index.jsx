@@ -3,7 +3,7 @@ import logo from "../../img/logo.png";
 import iconeFb from "../../img/fb.png";
 import iconeTw from "../../img/tw.png";
 import iconeIg from "../../img/ig.png";
-import Formas from "../Banner/Formas";
+import Formas from "../animacoes/Formas";
 
 const Footer = () => {
 	return (

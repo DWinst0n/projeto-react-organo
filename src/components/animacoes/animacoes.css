@@ -1,0 +1,112 @@
+.formas__container {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	z-index: 0;
+	overflow: hidden;
+}
+.forma__tipo1,
+.forma__tipo2 {
+	position: absolute;
+	width: auto;
+	color: var(--cor-contraste);
+}
+.forma__tipo1 {
+	height: clamp(0.5rem, 20vw, 8.75rem);
+}
+.forma__tipo2 {
+	height: clamp(1rem, 20vw, 11.25rem);
+}
+
+/* Animações para o Banner */
+
+.banner__shape .circulo,
+.banner__shape .circulo2 {
+	animation: pulsar 1.5s ease-in-out infinite;
+}
+.banner__shape .circulo {
+	left: 2.1%;
+	bottom: 2.1%;
+}
+.banner__shape .circulo2 {
+	right: 10%;
+	top: 0.4%;
+}
+.banner__shape .triangulo {
+	top: 8.3%;
+	left: 32%;
+	animation: girar 5s linear infinite;
+}
+.banner__shape .triangulo2 {
+	left: 49%;
+	bottom: 2.1%;
+	animation: girar 5s linear reverse infinite;
+}
+@media screen and (min-width: 1024px) {
+	.banner__shape .circulo {
+		left: 2.1%;
+		bottom: 2.1%;
+	}
+	.banner__shape .circulo2 {
+		right: 32%;
+		top: 0.4%;
+	}
+	.banner__shape .triangulo {
+		top: 8.3%;
+		left: 32%;
+	}
+	.banner__shape .triangulo2 {
+		left: 49%;
+		bottom: 2.1%;
+	}
+}
+
+/* Animações para o footer */
+
+.footer__shape .circulo,
+.footer__shape .circulo2 {
+	animation: pulsar 1.5s ease-in-out infinite;
+}
+.footer__shape .circulo {
+	right: 10%;
+	bottom: -20%;
+}
+.footer__shape .circulo2 {
+	right: 45%;
+	top: -50%;
+}
+.footer__shape .triangulo {
+	bottom: 7.5%;
+	left: 5%;
+	animation: girar 5s linear infinite;
+}
+.footer__shape .triangulo2 {
+	left: 27.5%;
+	bottom: 4.5%;
+	animation: girar 5s linear reverse infinite;
+}
+
+/* Animações */
+
+@keyframes girar {
+	0% {
+		transform: rotate(0deg) translateX(0px);
+	}
+	50% {
+		transform: rotate(180deg) translateX(30px);
+	}
+	100% {
+		transform: rotate(360deg) translateX(0px);
+	}
+}
+@keyframes pulsar {
+	0%,
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+	50% {
+		transform: scale(1.2);
+		opacity: 0.7;
+	}
+}
