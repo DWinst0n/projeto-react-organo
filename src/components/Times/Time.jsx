@@ -16,27 +16,28 @@ const Time = (p) => {
 			style={{
 				backgroundColor: `var(--fundo${stringModif("")})`,
 			}}>
-			<div className="nome__time__container">
-				<h2 className="nome__time">{p.nomeTime}</h2>
-				<div
-					className="time__hr"
-					style={{
-						width: "5vw",
-						border: `2px solid var(--cor${stringModif("")})`,
-					}}></div>
-			</div>
-			<Formas />
-
-			<div className="colaboradores__time">
-				{p.colabs.map((colab) => (
-					<Card
-						key={stringModif(colab.nome)}
-						nome={colab.nome}
-						nomeTime={colab.nomeTime}
-						foto={colab.arquivo.dataUrl}
-						cargo={colab.cargo}
-					/>
-				))}
+			<Formas componente={"time"} cor={`var(--cor${stringModif("")})`} />
+			<div className="time">
+				<div className="nome__time__container">
+					<h2 className="nome__time">{p.nomeTime}</h2>
+					<div
+						className="time__hr"
+						style={{
+							width: "5vw",
+							border: `2px solid var(--cor${stringModif("")})`,
+						}}></div>
+				</div>
+				<div className="colaboradores__time">
+					{p.colabs.map((colab) => (
+						<Card
+							key={stringModif(colab.nome)}
+							nome={colab.nome}
+							nomeTime={colab.nomeTime}
+							foto={colab.arquivo.dataUrl}
+							cargo={colab.cargo}
+						/>
+					))}
+				</div>
 			</div>
 		</div>
 	);

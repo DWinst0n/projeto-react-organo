@@ -4,13 +4,19 @@
 	width: 100vw;
 }
 .container__time {
+	width: 100%;
+	min-height: min-content;
+	padding: 2rem 0;
+	position: relative;
+}
+.time {
+	width: 100%;
+	height: 100%;
 	display: flex;
 	flex-direction: column;
-	text-align: center;
-	align-items: center;
-	width: 100%;
 	gap: clamp(0.75rem, 3vh, 3.25rem);
-	padding: 2rem 0;
+	text-align: center;
+	z-index: 5;
 }
 .nome__time__container {
 	display: flex;
