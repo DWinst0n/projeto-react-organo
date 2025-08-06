@@ -45,7 +45,7 @@ function App() {
 				style={{
 					display: formOpen ? "none" : "block",
 				}}>
-				<PlusSquareIcon />
+				<PlusSquareIcon size={32} color="var(--cor-contraste)" />
 			</Botao>
 			<div className="minha__organizacao__container">
 				<h3>Minha Organização:</h3>
