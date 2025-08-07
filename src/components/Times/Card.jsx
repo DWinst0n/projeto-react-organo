@@ -1,21 +1,15 @@
-const Card = (p) => {
-	const removerAcentos = (str) => str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-
-	const stringModif = (termo) => {
-		return `${termo}-${removerAcentos(p.nomeTime.toLowerCase().replaceAll(" ", "-"))}`;
-	};
-
+const Card = ({ cor, foto, nome, cargo }) => {
 	return (
 		<div className="card">
 			<div
 				className="time__area"
 				style={{
-					backgroundColor: `var(--cor${stringModif("")})`,
+					backgroundColor: cor,
 				}}></div>
 			<div className="dados__colaborador">
-				<img src={p.foto} alt="Imagem do Colaborador" />
-				<h4 className="nome__colaborador">{p.nome}</h4>
-				<p className="cargo__colaborador">{p.cargo}</p>
+				<img src={foto} alt="Imagem do Colaborador" />
+				<h4 className="nome__colaborador">{nome}</h4>
+				<p className="cargo__colaborador">{cargo}</p>
 			</div>
 		</div>
 	);
