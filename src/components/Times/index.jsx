@@ -2,10 +2,16 @@ import Time from "./Time";
 import "./times.css";
 
 const Times = ({ colabs, times }) => {
+	console.log(times);
 	return (
 		<section className="times__container" id="containerTime">
-			{times.map((time) => (
-				<Time key={"seção " + time} colabs={colabs.filter((colab) => colab.nomeTime === time)} nomeTime={time} />
+			{times.map(({ nome, cor, fundo }) => (
+				<Time
+					key={"seção " + nome}
+					colabs={colabs.filter((colab) => colab.nomeTime === nome)}
+					nomeTime={nome}
+					cores={{ primaria: cor, fundo: fundo }}
+				/>
 			))}
 		</section>
 	);

@@ -1,25 +1,16 @@
 import Formas from "../animacoes/Formas";
 import Card from "./Card";
 
-const Time = ({ nomeTime, colabs }) => {
-	const removerAcentos = (str) => str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-
-	const stringModif = (termo) => {
-		return `${termo}-${removerAcentos(nomeTime.toLowerCase().replaceAll(" ", "-"))}`;
-	};
-
-	const corArea = `var(--cor${stringModif("")})`;
-	const corFundo = `var(--fundo${stringModif("")})`;
-
+const Time = ({ nomeTime, colabs, cores }) => {
 	if (!colabs || colabs.length === 0) return null;
 
 	return (
 		<div
 			className="container__time"
 			style={{
-				backgroundColor: corFundo,
+				backgroundColor: cores.fundo,
 			}}>
-			<Formas componente={"time"} cor={corArea} />
+			<Formas componente={"time"} cor={cores.primaria} />
 			<div className="time">
 				<div className="nome__time__container">
 					<h2 className="nome__time">{nomeTime}</h2>
@@ -27,18 +18,18 @@ const Time = ({ nomeTime, colabs }) => {
 						className="time__hr"
 						style={{
 							width: "5vw",
-							border: `2px solid var(--cor${stringModif("")})`,
+							border: `2px solid ${cores.primaria}`,
 						}}></div>
 				</div>
 				<div className="colaboradores__time">
 					{colabs.map((colab) => (
 						<Card
-							key={stringModif(colab.nome)}
+							key={`${nomeTime} - colaborador ${colab.cargo} - ${colab.nome}`}
 							nome={colab.nome}
 							nomeTime={colab.nomeTime}
 							foto={colab.arquivo.dataUrl}
 							cargo={colab.cargo}
-							cor={corArea}
+							cor={cores.primaria}
 						/>
 					))}
 				</div>

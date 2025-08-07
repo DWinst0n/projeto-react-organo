@@ -9,22 +9,6 @@
 	--cor-fonte-terciaria: #afafaf;
 	--cor-form: #f6f6f6;
 	--cor-input: #ffffff;
-
-	--cor-programacao: #57c278;
-	--cor-front-end: #82cffa;
-	--cor-data-science: #a6d157;
-	--cor-devops: #e06b69;
-	--cor-ux-e-design: #db6ebf;
-	--cor-mobile: #ffba05;
-	--cor-inovacao-e-gestao: #ff8a29;
-
-	--fundo-programacao: #d9f7e9;
-	--fundo-front-end: #e8f8ff;
-	--fundo-data-science: #f0f8e2;
-	--fundo-devops: #fde7e8;
-	--fundo-ux-e-design: #fae9f5;
-	--fundo-mobile: #fff5d9;
-	--fundo-inovacao-e-gestao: #ffeedf;
 }
 * {
 	box-sizing: border-box;
