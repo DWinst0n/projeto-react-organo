@@ -4,12 +4,12 @@ import "./times.css";
 const Times = ({ colabs, times }) => {
 	return (
 		<section className="times__container" id="containerTime">
-			{times.map(({ nome, cor, fundo }) => (
+			{times.map(({ nome, cor }) => (
 				<Time
 					key={"seção " + nome}
 					colabs={colabs.filter((colab) => colab.nomeTime === nome)}
 					nomeTime={nome}
-					cores={{ primaria: cor, fundo: fundo }}
+					cor={cor}
 				/>
 			))}
 		</section>

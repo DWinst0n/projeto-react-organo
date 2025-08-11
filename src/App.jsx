@@ -17,37 +17,30 @@ function App() {
 		{
 			nome: "Programação",
 			cor: "#57c278",
-			fundo: "#d9f7e9",
 		},
 		{
 			nome: "Front-End",
 			cor: "#82cffa",
-			fundo: "#e8f8ff",
 		},
 		{
 			nome: "Data Science",
 			cor: "#a6d157",
-			fundo: "#f0f8e2",
 		},
 		{
 			nome: "Devops",
 			cor: "#e06b69",
-			fundo: "#fde7e8",
 		},
 		{
 			nome: "UX e Design",
 			cor: "#db6ebf",
-			fundo: "#fae9f5",
 		},
 		{
 			nome: "Mobile",
 			cor: "#ffba05",
-			fundo: "#fff5d9",
 		},
 		{
 			nome: "Inovação e Gestão",
 			cor: "#ff8a29",
-			fundo: "#ffeedf",
 		},
 	];
 
