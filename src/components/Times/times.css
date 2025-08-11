@@ -47,6 +47,40 @@
 	border-radius: 0.625rem;
 	box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
 }
+.btnCard__container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	height: clamp(1rem, 5vw, 1.5rem);
+	width: clamp(1rem, 5vw, 1.5rem);
+	background-color: rgba(0, 0, 0, 0.5);
+	top: -10px;
+	right: -10px;
+	position: absolute;
+
+	opacity: 1;
+	visibility: visible;
+	pointer-events: auto;
+}
+
+@media (hover: hover) {
+	.btnCard__container {
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
+		transition: opacity 0.5s ease, visibility 0s linear 0.5s;
+	}
+
+	.card:hover .btnCard__container,
+	.btnCard__container:hover {
+		opacity: 1;
+		visibility: visible;
+		pointer-events: auto;
+		transition: opacity 0.5s ease;
+	}
+}
+
 .time__area {
 	width: 100%;
 	height: 25%;

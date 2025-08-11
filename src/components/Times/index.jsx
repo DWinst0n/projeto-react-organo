@@ -2,7 +2,6 @@ import Time from "./Time";
 import "./times.css";
 
 const Times = ({ colabs, times }) => {
-	console.log(times);
 	return (
 		<section className="times__container" id="containerTime">
 			{times.map(({ nome, cor, fundo }) => (

@@ -1,6 +1,11 @@
+import { XIcon } from "@phosphor-icons/react";
+
 const Card = ({ cor, foto, nome, cargo }) => {
 	return (
 		<div className="card">
+			<div className="btnCard__container">
+				<XIcon className="BtntExcluir__Card" color="white" />
+			</div>
 			<div
 				className="time__area"
 				style={{
