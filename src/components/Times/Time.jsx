@@ -23,6 +23,9 @@ const Time = ({ nomeTime, colabs, cor }) => {
 				onChange={(e) => {
 					setCor(e.target.value);
 				}}
+				style={{
+					border: `5px double ${corDestaque}`,
+				}}
 			/>
 			<Formas componente={"time"} cor={corDestaque} />
 			<div className="time">
