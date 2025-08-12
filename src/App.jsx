@@ -6,67 +6,65 @@ import "./app.css";
 import Banner from "./components/Banner";
 import Form from "./components/Form";
 import Times from "./components/Times";
-import Footer from "./components/footer";
+import Footer from "./components/Footer";
 import Botao from "./components/Form/Botao";
 
 function App() {
-	const [colaboradores, setColaboradores] = useState([]);
+	const [colaboradores, setColaboradores] = useState(() => {
+		const colabsGuardados = localStorage.getItem("colaboradores");
+		return colabsGuardados ? JSON.parse(colabsGuardados) : [];
+	});
+
+	const [times, setTimes] = useState(() => {
+		const timesGuardados = localStorage.getItem("times");
+		return timesGuardados ? JSON.parse(timesGuardados) : [];
+	});
+
 	const [formOpen, setOpenForm] = useState(false);
 
-	const times = [
-		{
-			nome: "Programação",
-			cor: "#57c278",
-		},
-		{
-			nome: "Front-End",
-			cor: "#82cffa",
-		},
-		{
-			nome: "Data Science",
-			cor: "#a6d157",
-		},
-		{
-			nome: "Devops",
-			cor: "#e06b69",
-		},
-		{
-			nome: "UX e Design",
-			cor: "#db6ebf",
-		},
-		{
-			nome: "Mobile",
-			cor: "#ffba05",
-		},
-		{
-			nome: "Inovação e Gestão",
-			cor: "#ff8a29",
-		},
-	];
-
-	const aoNovoColaboradorCadastrado = (colaborador) => {
-		JSON.stringify(colaborador);
-		setColaboradores([...colaboradores, colaborador]);
-	};
+	useEffect(() => {
+		localStorage.setItem("colaboradores", JSON.stringify(colaboradores));
+	}, [colaboradores]);
 
 	useEffect(() => {
-		if (formOpen) {
-			const formEl = document.getElementById("formContainer");
-			formEl.scrollIntoView({ behavior: "smooth" });
-		} else {
-			const equipesEl = document.getElementById("containerTime");
-			equipesEl.scrollIntoView({ behavior: "smooth" });
+		localStorage.setItem("times", JSON.stringify(times));
+	}, [times]);
+
+	useEffect(() => {
+		const targetEl = formOpen ? document.getElementById("formContainer") : document.getElementById("containerTime");
+
+		if (targetEl) {
+			targetEl.scrollIntoView({ behavior: "smooth" });
 		}
 	}, [formOpen]);
+
+	const aoNovoColaboradorCadastrado = (colaborador) => {
+		setColaboradores((prev) => {
+			if (prev.some((c) => c.id === colaborador.id)) {
+				return prev;
+			}
+			return [...prev, colaborador];
+		});
+	};
+
+	const aoCriarTime = (novoTime) => {
+		setTimes((prev) => {
+			if (prev.some((t) => t.id === novoTime.id)) {
+				return prev;
+			}
+			return [...prev, novoTime];
+		});
+	};
 
 	return (
 		<div className="App">
 			<Banner />
 			<Form
-				aoCadastro={(colaborador) => aoNovoColaboradorCadastrado(colaborador)}
+				aoCadastro={aoNovoColaboradorCadastrado}
 				formOpen={formOpen}
 				fecharForm={() => setOpenForm(false)}
 				times={times.map((time) => time.nome)}
+				criarTime={aoCriarTime}
 			/>
 			<Botao
 				className={"btn__openForm"}
