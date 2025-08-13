@@ -3,7 +3,7 @@ import tinycolor from "tinycolor2";
 import Formas from "../animacoes/Formas";
 import Card from "./Card";
 
-const Time = ({ nomeTime, colabs, cor }) => {
+const Time = ({ nomeTime, colabs, cor, deletarColab }) => {
 	const [corDestaque, setCor] = useState(cor);
 
 	const corFundo = tinycolor(corDestaque).lighten(20).toHexString();
@@ -46,7 +46,9 @@ const Time = ({ nomeTime, colabs, cor }) => {
 							nomeTime={colab.nomeTime}
 							foto={colab.arquivo.dataUrl}
 							cargo={colab.cargo}
+							id={colab.id}
 							cor={corDestaque}
+							deletarColab={deletarColab}
 						/>
 					))}
 				</div>

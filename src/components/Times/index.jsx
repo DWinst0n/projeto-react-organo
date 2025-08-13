@@ -1,7 +1,7 @@
 import Time from "./Time";
 import "./times.css";
 
-const Times = ({ colabs, times }) => {
+const Times = ({ colabs, times, deletarColab }) => {
 	return (
 		<section className="times__container" id="containerTime">
 			{times.map(({ nome, cor }) => (
@@ -10,6 +10,7 @@ const Times = ({ colabs, times }) => {
 					colabs={colabs.filter((colab) => colab.nomeTime === nome)}
 					nomeTime={nome}
 					cor={cor}
+					deletarColab={deletarColab}
 				/>
 			))}
 		</section>

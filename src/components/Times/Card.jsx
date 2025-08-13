@@ -1,10 +1,10 @@
 import { XIcon } from "@phosphor-icons/react";
 
-const Card = ({ cor, foto, nome, cargo }) => {
+const Card = ({ cor, foto, nome, cargo, id, deletarColab }) => {
 	return (
 		<div className="card">
 			<div className="btnCard__container">
-				<XIcon className="BtntExcluir__Card" color="white" />
+				<XIcon className="BtntExcluir__Card" onClick={() => deletarColab(id)} color="white" />
 			</div>
 			<div
 				className="time__area"
