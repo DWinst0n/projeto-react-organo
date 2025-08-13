@@ -19,12 +19,30 @@ const CampoForm = ({ dado, aoAlterado, obrigatorio, valor, times, tipo }) => {
 						<option value="" disabled>
 							Selecione o time:
 						</option>
-						{times.map((equipe) => (
-							<option key={equipe} value={equipe}>
+						{(times || []).map((equipe, index) => (
+							<option key={`campo-${index}-${equipe}`} value={equipe}>
 								{equipe}
 							</option>
 						))}
 					</select>
+				</div>
+			);
+		case "cor":
+			return (
+				<div className="campo__form">
+					<label htmlFor="selecionarCor" className="dado__tipo">
+						{dado}
+					</label>
+					<input
+						type="color"
+						id="selecionarCor"
+						className="form__cor"
+						required={obrigatorio}
+						value={valor}
+						onChange={(e) => {
+							aoAlterado(e.target.value);
+						}}
+					/>
 				</div>
 			);
 		default:

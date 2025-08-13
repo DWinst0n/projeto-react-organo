@@ -1,3 +1,9 @@
+.forms__container {
+	display: flex;
+	flex: 1;
+	flex-wrap: wrap;
+}
+
 .form__container {
 	display: flex;
 	justify-content: center;
@@ -7,12 +13,6 @@
 	margin: 5rem auto 5rem auto;
 	border-radius: 1.25rem;
 	box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.08);
-}
-.formulario {
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	gap: clamp(0.75rem, 0.75vh, 2.75rem);
 }
 .formulario h3 {
 	align-self: center;
@@ -24,12 +24,19 @@
 	display: flex;
 	gap: 0.5rem;
 	flex-direction: column;
-	margin-bottom: 0.75rem;
+	margin: 0.75rem 0;
 }
 .form__input,
 .nome__arquivo,
 .form__select {
 	padding: 1rem 0.65rem;
+	background-color: var(--cor-input);
+	border: none;
+	box-shadow: 0.625rem 0.625rem 2rem rgba(0, 0, 0, 0.06);
+}
+.form__cor {
+	padding: 0;
+	width: 100%;
 	background-color: var(--cor-input);
 	border: none;
 	box-shadow: 0.625rem 0.625rem 2rem rgba(0, 0, 0, 0.06);
@@ -43,9 +50,22 @@
 .file__upload,
 .dado__tipo {
 	font-family: var(--fonte-secundaria);
-	font-size: 1.125rem;
+	font-size: clamp(0.75rem, 2vw, 1.25rem);
 	font-weight: 600;
 }
+.form__msg {
+	font-family: var(--fonte-secundaria);
+	font-size: clamp(0.5rem, 2vw, 0.75rem);
+	font-weight: 600;
+	text-decoration: underline;
+	background: none;
+	border: none;
+}
+.form__msg:hover,
+.form__msg:active {
+	color: var(--cor-destaque);
+}
+
 .nome__arquivo,
 .form__input::placeholder {
 	cursor: pointer;
