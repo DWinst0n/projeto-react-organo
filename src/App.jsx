@@ -44,19 +44,22 @@ function App() {
 	};
 
 	const deletarColab = (id) => {
-		setColaboradores(colaboradores.filter((colab) => colab.id !== id));
+		if (window.confirm("Deseja excluir esse colaborador?"))
+			setColaboradores(colaboradores.filter((colab) => colab.id !== id));
 	};
 	const limparTimesVazios = () => {
-		const timesComColaboradores = times.filter((time) => colaboradores.some((colab) => colab.nomeTime === time.nome));
+		if (window.confirm("Cuidado! Verifique antes.\nDeseja realmente excluir todos os times vazios?")) {
+			const timesComColaboradores = times.filter((time) => colaboradores.some((colab) => colab.nomeTime === time.nome));
 
-		const quantidadeDeletada = times.length - timesComColaboradores.length;
+			const quantidadeDeletada = times.length - timesComColaboradores.length;
 
-		setTimes(timesComColaboradores);
+			setTimes(timesComColaboradores);
 
-		if (quantidadeDeletada > 0) {
-			alert(`${quantidadeDeletada} time(s) sem colaboradores foram removidos!`);
-		} else {
-			alert("Nenhum time vazio encontrado!");
+			if (quantidadeDeletada > 0) {
+				alert(`${quantidadeDeletada} time(s) sem colaboradores foram removidos!`);
+			} else {
+				alert("Nenhum time vazio encontrado!");
+			}
 		}
 	};
 
